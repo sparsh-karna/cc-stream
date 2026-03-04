@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cc-stream"
+version = "1.0.0"
+description = "CC-Stream: Collatz-ChaCha Hybrid Stream Cipher — a defense-in-depth post-quantum stream cipher"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Sparsh Karna"},
+]
+keywords = ["cryptography", "stream-cipher", "chacha20", "collatz", "post-quantum"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Security :: Cryptography",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+dev  = ["pytest>=7.0", "pytest-cov>=4.0", "ruff"]
+docs = [
+    "mkdocs>=1.6,<2.0",
+    "mkdocs-material>=9.5",
+    "mkdocstrings[python]>=0.25",
+    "ruff",
+]
+all  = ["cc-stream[dev,docs]"]
+
+[project.scripts]
+cc-stream = "cc_stream.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
