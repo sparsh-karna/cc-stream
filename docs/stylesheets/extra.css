@@ -1,0 +1,39 @@
+/* ---------------------------------------------------------------
+   CC-Stream: custom MkDocs-Material overrides
+--------------------------------------------------------------- */
+
+/* Wider content area for code-heavy API pages */
+.md-content {
+  max-width: 1000px;
+}
+
+/* Module number badge on headings */
+.module-badge {
+  display: inline-block;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border-radius: 4px;
+  font-size: 0.7em;
+  padding: 0.1em 0.5em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Security parameter tables */
+.security-table th {
+  background: var(--md-primary-fg-color--light);
+}
+
+/* Subtle separator between API members */
+.doc-section + .doc-section {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+/* Mermaid diagrams centred */
+.mermaid {
+  text-align: center;
+}
