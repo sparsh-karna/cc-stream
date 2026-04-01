@@ -26,3 +26,6 @@ site/
 .vscode/
 .idea/
 *.swp
+
+# mac devices
+.DS_Store
